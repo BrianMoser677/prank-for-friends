@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт</title>
+</head>
+<body>
+    <h1>Переходник</h1>
+    <audio id="welcome-sound" src="youoa.mp3"></audio>
+    <button onclick="playSound()">Нажми для потверждения что ты человек</button>
+
+    <script>
+        function playSound() {
+            var audio = document.getElementById("welcome-sound");
+            audio.play().then(() => {
+                console.log("Ждите, всё работает");
+            }).catch((error) => {
+                console.error("Ошибка, попробуйте еще раз:", error);
+            });
+        }
+    </script>
+</body>
+</html>>
